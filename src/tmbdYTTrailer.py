@@ -14,7 +14,8 @@ else:
 
 
 from json import load
-from twisted.web.client import downloadPage
+from twisted.internet.reactor import callInThread
+from requests import get, exceptions
 
 from enigma import ePicLoad, eTimer, eServiceReference
 from Components.ActionMap import ActionMap, HelpableActionMap
